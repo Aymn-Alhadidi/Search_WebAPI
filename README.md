@@ -116,7 +116,7 @@ https://localhost:7XXX/swagger
 
 ---
 
-## 📊 Database Schema
+##  Database Schema
 
 ### SQL Script to Create Tables
 
@@ -157,9 +157,9 @@ CREATE TABLE Searches (
 
 ---
 
-## 🔌 API Endpoints
+##  API Endpoints
 
-### 👥 Clients API
+###  Clients API
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -179,7 +179,7 @@ CREATE TABLE Searches (
 | PUT | `/api/items/Update{id}` | Update item |
 | DELETE | `/api/items/Delete/{id}` | Delete item |
 
-### 🔍 Searches API
+###  Searches API
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -315,7 +315,7 @@ Search_WebAPI/
 
 ---
 
-## ⚠️ Known Issues / Notes
+##  Known Issues / Notes
 
 - **Database:** SQL Server is used instead of PostgreSQL (as discussed and approved)
 - **Validation:** Basic validation is implemented; can be enhanced
