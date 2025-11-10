@@ -19,7 +19,7 @@ The project follows a **Three-Tier Architecture**:
 - **DTOs Layer** - Data Transfer Objects for communication between layers
 
 
-## 🏗️ Three-Tier Architecture with DTOs
+##  Three-Tier Architecture with DTOs
 ```
                     ┌─────────────────────┐
                     │   API Controllers   │
