@@ -38,8 +38,7 @@ The project follows a **Three-Tier Architecture**:
 
 - **ASP.NET Core 8.0** - Web API Framework
 - **SQL Server** - Database (instead of PostgreSQL as approved)
-- **Hangfire** - Background job processing
-- **Swagger/OpenAPI** - API Documentation
+- **Swagger** - API Documentation
 - **ADO.NET** - Data Access
 
 ---
@@ -158,37 +157,37 @@ CREATE TABLE Searches (
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/api/clients` | Get all clients |
-| GET | `/api/clients/{id}` | Get client by ID |
-| POST | `/api/clients` | Create new client |
-| PUT | `/api/clients/{id}` | Update client |
-| DELETE | `/api/clients/{id}` | Delete client |
+| GET | `/api/clients/Find/{id}` | Get client by ID |
+| POST | `/api/clients/AddNew` | Create new client |
+| PUT | `/api/clients/Update{id}` | Update client |
+| DELETE | `/api/clients/Delete/{id}` | Delete client |
 
-### 📦 Items API
+###  Items API
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/items` | Get all items |
-| GET | `/api/items/{id}` | Get item by ID |
-| POST | `/api/items` | Create new item |
-| PUT | `/api/items/{id}` | Update item |
-| DELETE | `/api/items/{id}` | Delete item |
+| GET | `/api/items/All` | Get all items |
+| GET | `/api/items/FindItem/{id}` | Get item by ID |
+| POST | `/api/items/AddNew` | Create new item |
+| PUT | `/api/items/Update{id}` | Update item |
+| DELETE | `/api/items/Delete/{id}` | Delete item |
 
 ### 🔍 Searches API
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/api/searches` | Save a search event |
-| GET | `/api/searches/popular/{clientId}` | Get top 20 popular items for a client (last 30 days) |
+| GET | `/api/searches/GetPopularItems/{clientId}` | Get top 20 popular items for a client (last 30 days) |
 
 ---
 
-## 📝 Example Requests
+##  Example Requests
 
 ### 1. Create a Client
 
 **Request:**
 ```http
-POST /api/clients
+POST /api/clients/AddNew
 Content-Type: application/json
 
 {
@@ -210,7 +209,7 @@ Content-Type: application/json
 
 **Request:**
 ```http
-POST /api/items
+POST /api/items/AddNew
 Content-Type: application/json
 
 {
@@ -280,50 +279,7 @@ GET /api/searches/popular/client-123-abc
 
 ---
 
-## ⚙️ Background Job (Hangfire)
-
-The project includes a **Hangfire background job** that automatically runs **daily at 2:00 AM** to:
-- Move searches older than 30 days from `Searches` table to `OldSearches` table
-- Keep the main searches table optimized for recent queries
-
-### Access Hangfire Dashboard
-
-Navigate to:
-```
-https://localhost:7XXX/hangfire
-```
-
-**Note:** In production, secure this dashboard with authentication.
-
----
-
-## 🧪 Testing the API
-
-### Using Swagger UI
-1. Run the application
-2. Open `https://localhost:7XXX/swagger`
-3. Try out each endpoint directly from the browser
-
-### Using Postman
-1. Import the API endpoints
-2. Set `Content-Type: application/json` header
-3. Send requests with appropriate JSON payloads
-
-### Using cURL
-
-```bash
-# Create a client
-curl -X POST https://localhost:7XXX/api/clients \
-  -H "Content-Type: application/json" \
-  -d '{"id":"test-client","name":"Test Store"}'
-
-# Get popular searches
-curl -X GET https://localhost:7XXX/api/searches/popular/test-client
-```
-
----
-
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Search_WebAPI/
@@ -354,38 +310,9 @@ Search_WebAPI/
 ## ⚠️ Known Issues / Notes
 
 - **Database:** SQL Server is used instead of PostgreSQL (as discussed and approved)
-- **Background Jobs:** Hangfire is configured to run daily at 2 AM server time
-- **Authentication:** Not implemented (can be added for production)
-- **Validation:** Basic validation is implemented; can be enhanced with FluentValidation
+- **Validation:** Basic validation is implemented; can be enhanced
+- **Update Performing:** It's better to write the SQL code in stored procedure in the data base and execute it from the Data Access Layer but written in this way to allow you to see the queries 
 
 ---
 
-## 🔒 Security Considerations
-
-For production deployment, consider:
-- Adding authentication/authorization (JWT tokens)
-- Securing Hangfire dashboard
-- Using parameterized queries (already implemented)
-- Adding rate limiting
-- Implementing logging and monitoring
-
----
-
-## 🤝 Contact
-
-For any questions or clarifications:
-
-**Developer:** Aymen Alhadidi  
-**Assignment Supervisor:** Mr. Muhaymin Tariq al-Ani  
-**Email:** muhtariq@earthlink.iq  
-**Organization:** Earthlink Communications
-
----
-
-## 📄 License
-
-This project is developed as part of a technical assessment for Earthlink Communications.
-
----
-
-**Thank you for reviewing my submission!** 🚀
+**Thank you for reviewing my submission!** 
