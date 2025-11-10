@@ -23,21 +23,21 @@ The project follows a **Three-Tier Architecture**:
 ## Features Implemented
  Required Features
 
- **Clients CRUD Operations** - Create, Read, Update, Delete clients
- **Items CRUD Operations** - Create, Read, Update, Delete items
- **Save Search Events** - Record user search activities
- **Get Popular Searches** - Retrieve top 20 most searched items in the last 30 days per client
+- **Clients CRUD Operations** - Create, Read, Update, Delete clients
+- **Items CRUD Operations** - Create, Read, Update, Delete items
+- **Save Search Events** - Record user search activities
+- **Get Popular Searches** - Retrieve top 20 most searched items in the last 30 days per client
 
  Bonus Features
 
- **Validation & Error Handling** - Input validation and comprehensive error responses
- **Swagger Documentation** - Interactive API documentation
+- **Validation & Error Handling** - Input validation and comprehensive error responses
+- **Swagger Documentation** - Interactive API documentation
 
  Additional Features
 
- **Find by ID** - Find specific client or item by ID
- **Get All Records** - Retrieve all clients and items with pagination support
- **Complete CRUD** - Full Create, Read, Update, Delete operations for both Clients and Items entities
+- **Find by ID** - Find specific client or item by ID
+- **Get All Records** - Retrieve all clients and items with pagination support
+- **Complete CRUD** - Full Create, Read, Update, Delete operations for both Clients and Items entities
 
 ---
 
