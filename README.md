@@ -20,7 +20,7 @@ The project follows a **Three-Tier Architecture**:
 
 ---
 
-## ✨ Features Implemented
+##  Features Implemented
 
 ###  Required Features
 - [x] **Clients CRUD Operations** - Create, Read, Update, Delete clients
@@ -34,7 +34,7 @@ The project follows a **Three-Tier Architecture**:
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **ASP.NET Core 8.0** - Web API Framework
 - **SQL Server** - Database (instead of PostgreSQL as approved)
@@ -43,7 +43,7 @@ The project follows a **Three-Tier Architecture**:
 
 ---
 
-## 📦 Prerequisites
+##  Prerequisites
 
 Before running the project, ensure you have:
 
@@ -54,7 +54,7 @@ Before running the project, ensure you have:
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Step 1: Clone the Repository
 
