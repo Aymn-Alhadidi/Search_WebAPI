@@ -20,17 +20,24 @@ The project follows a **Three-Tier Architecture**:
 
 ---
 
-##  Features Implemented
+Features Implemented
+ Required Features
 
-###  Required Features
-- [x] **Clients CRUD Operations** - Create, Read, Update, Delete clients
-- [x] **Save Search Events** - Record user search activities
-- [x] **Get Popular Searches** - Retrieve top 20 most searched items in the last 30 days per client
-- [x] **Swagger Documentation** - Interactive API documentation
+ Clients CRUD Operations - Create, Read, Update, Delete clients
+ Items CRUD Operations - Create, Read, Update, Delete items
+ Save Search Events - Record user search activities
+ Get Popular Searches - Retrieve top 20 most searched items in the last 30 days per client
 
-###  Bonus Features
-- [x] **Validation & Error Handling** - Input validation and comprehensive error responses
-- [x] **Find Operations** - Additional search functionality for clients and items
+ Bonus Features
+
+ Validation & Error Handling - Input validation and comprehensive error responses
+ Swagger Documentation - Interactive API documentation
+
+ Additional Features
+
+ Find by ID - Find specific client or item by ID
+ Get All Records - Retrieve all clients and items with pagination support
+ Complete CRUD - Full Create, Read, Update, Delete operations for both Clients and Items entities
 
 ---
 
@@ -185,7 +192,8 @@ CREATE TABLE Searches (
 
 ### 1. Create a Client
 
-**Request:**
+```
+**Response:**
 ```http
 POST /api/clients/AddNew
 Content-Type: application/json
