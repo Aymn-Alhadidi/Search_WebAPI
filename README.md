@@ -5,7 +5,7 @@
 A RESTful Web API built with ASP.NET Core that tracks user searches and provides insights into the most popular items searched by clients. This project implements a three-tier architecture for better separation of concerns and maintainability.
 
 **Assignment by:** Earthlink Communications  
-**Developer:** Aymen Alhadidi  
+**Developer:** Aymn Alhadidi  
 
 ---
 
